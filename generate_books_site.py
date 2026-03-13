@@ -3,6 +3,9 @@ import pandas as pd
 EXCEL_FILE = "books.xlsx"
 OUTPUT_HTML = "index.html"
 
+# SET YOUR DATE MANUALLY HERE:
+LAST_UPDATED_MANUAL = "March 13, 2026"
+
 # Load data
 try:
     df = pd.read_excel(EXCEL_FILE)
@@ -90,6 +93,15 @@ html_content = f"""
             margin-top: 15px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(5px);
+        }}
+        
+        .update-ts {{
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            margin-top: 10px;
+            font-weight: 400;
+            letter-spacing: 0.05em;
         }}
 
         .search-wrapper {{
@@ -192,6 +204,7 @@ html_content = f"""
         <div class="count-badge">
             <span id="visible-count">{total_books}</span> / <span id="total-count">{total_books}</span> Books
         </div>
+                <span class="update-ts">Last updated: {LAST_UPDATED_MANUAL}</span>
     </header>
 
     <div class="search-wrapper">
