@@ -1,6 +1,6 @@
 import pandas as pd
 
-EXCEL_FILE = "books.xlsx"
+EXCEL_FILE = "BooksGoodVersion.xlsx"
 OUTPUT_HTML = "index.html"
 
 # SET YOUR DATE MANUALLY HERE:
